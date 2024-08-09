@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class A 
+{
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter a number:");
+        int n=s.nextInt();
+        int num=n;
+        int i=1;
+        while(num>0)
+        {
+            i*=10;
+            num/=10;
+        }
+        int sq=n*n;
+        if(sq%i==n%i)
+        {
+            System.out.println(n+" "+"is an automorphic number");
+        }
+        else 
+        {
+            System.out.println(n+" "+"is not an automorphic number");
+        }
+    }
+}
