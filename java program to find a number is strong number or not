@@ -21,7 +21,7 @@ class A
         }
         if(sum==n)
         {
-            System.out.println("strong number");
+            System.out.println(n+" "+"is a strong number");
         }
     }
 }
