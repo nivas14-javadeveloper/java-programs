@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class A 
+{
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter starting range:");
+        int n=s.nextInt();
+        int num=n;
+        int sum=0;
+        while(num>0)
+        {
+            int rem=num%10;
+            int fact=1;
+            for(int i=1;i<=rem;i++)
+            {
+                fact*=i;
+            }
+             sum=sum+fact;
+            num/=10;
+        }
+        if(sum==n)
+        {
+            System.out.println("strong number");
+        }
+    }
+}
