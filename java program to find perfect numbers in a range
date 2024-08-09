@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class A 
+{
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter starting range:");
+        int a=s.nextInt();
+        System.out.println("enter ending range:");
+        int b=s.nextInt();
+        for(int i=a;i<=b;i++)
+        {
+            int sum=0;
+        for(int j=1;j<i;j++)
+        {
+            if(i%j==0)
+            {
+                sum=sum+j;
+            }
+        }
+        if(sum==i)
+        {
+            System.out.println(i+" "+"is a perfect number");
+        }
+        }
+    }
+}
