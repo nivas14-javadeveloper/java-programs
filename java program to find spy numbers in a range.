@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+class A {
+    public static void main(String[] args) 
+    {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter starting range:");
+        int a= s.nextInt();
+        System.out.println("Enter ending range:");
+        int b=s.nextInt();
+        for(int i=a;i<=b;i++)
+        {
+        int num=i;
+        int sum=0;
+        int mul=1;
+        while(num>0)
+        {
+            int j=num%10;
+                sum=sum+j;
+                mul=mul*j;
+            num/=10;
+        }
+        if(sum==mul)
+        {
+            System.out.println(i+" "+"is a spy number");
+        }
+        }
+    }
+}
+
