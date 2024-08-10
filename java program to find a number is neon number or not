@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class A 
+{
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter a number:");
+        int n=s.nextInt();
+        int num1=n;
+        int sum=0;
+        int sq=num1*num1;
+        while(sq>0)
+        {
+            int rem=sq%10;
+            sum=sum+rem;
+            sq/=10;
+        }
+        if(sum==n)
+        {
+            System.out.println(n+" "+" is a neon number");
+        }
+        else 
+        {
+            System.out.println(n+" "+" is not a neon number");
+        }
+    }
+}
