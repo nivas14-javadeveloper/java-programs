@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class A {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter starting range:");
+        int a = s.nextInt();
+        System.out.println("Enter ending range:");
+        int b = s.nextInt();
+        System.out.println("Enter prime number position:");
+        int position = s.nextInt();
+        int count = 0;
+
+        for (int i = a; i <= b; i++) {
+            boolean isPrime = true;
+
+            if (i == 1) {
+                continue; 
+            }
+            for (int j = 2; j <= i / 2; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                count++; 
+            }
+
+            if (count == position) {
+                System.out.println("The prime number at position " + position + " is: " + i);
+                break;
+            }
+        }
+
+        if (count < position) {
+            System.out.println("There are not enough prime numbers in the given range.");
+        }
+    }
+}
+
