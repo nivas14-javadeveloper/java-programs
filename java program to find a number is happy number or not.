@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class A 
+{
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter starting range:");
+        int n=s.nextInt();
+        int originalnum=n;
+        int sq=0;
+        while(n!=1)
+        {
+            int res=0;
+        while(n>0)
+        {
+            int num=n%10;
+            sq=num*num;
+            res=sq+res;
+            n/=10;
+        }
+        n=res;
+        }
+        if(n==1)
+        {
+            System.out.println(originalnum+" "+"is a happy number");
+        }
+        else
+        {
+             System.out.println(originalnum+" "+"is not a happy number");
+        }
+    }
+}
