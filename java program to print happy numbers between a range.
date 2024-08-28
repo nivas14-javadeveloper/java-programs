@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class A 
+{
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter starting number:");
+        int a=s.nextInt();
+        System.out.println("enter ending number:");
+        int b=s.nextInt();
+        for(int i=a;i<=b;i++)
+        {
+            happy(i);
+        }
+    }
+     static void happy(int n)
+    {
+        int originalnum=n;
+        int sum=0;
+        int sq=0;
+        while(n!=1 && n!=4)
+        {
+            sum=0;
+            while(n>0)
+            {
+                int rem=n%10;
+                sq=rem*rem;
+                sum=sum+sq;
+                n/=10;
+            }
+            n=sum;
+        }
+        if(sum==1)
+        {
+            System.out.println(originalnum+" "+"is a happy number");
+        }
+    }
+}
