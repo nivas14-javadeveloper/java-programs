@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class A 
+{
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter starting number:");
+        int a=s.nextInt();
+        System.out.println("enter ending number:");
+        int b=s.nextInt();
+        for(int i=a;i<=b;i++)
+        {
+        int originalnum=i;
+        int sq=i*i;
+        int div=1;
+        int count=0;
+        while(originalnum>0)
+        {
+            div*=10;
+            originalnum/=10;
+        }
+        int sum=0;
+        while(sq>0)
+        {
+            int rem=sq%div;
+            sum=sum+rem;
+            sq/=div;
+        }
+        if(sum==i)
+        {
+            System.out.println(i+" "+"is an karprekar number!");
+        }
+        }
+    }
+}
