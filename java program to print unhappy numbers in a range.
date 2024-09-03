@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class A 
+{
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter starting range:");
+        int a=s.nextInt();
+        System.out.println("enter ending range:");
+        int b=s.nextInt();
+        for(int i=a;i<=b;i++)
+        {
+        int originalnum=i;
+        int originalnum2=i;
+        int count=0;
+        while(originalnum>0)
+        {
+            count++;
+            originalnum/=10;
+        }
+        int res=0;
+        while(originalnum2>0)
+        {
+            int rem=originalnum2%10;
+             res=(int)Math.pow(rem,count)+res;
+            originalnum2/=10;
+            count--;
+        }
+        if(res==i)
+        {
+            System.out.println(i+" "+"is an unhappy number");
+        }
+        }
+    }
+}
