@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class A 
+{
+    public static void main(String[]args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter a number:");
+        int n=s.nextInt();
+        int originalnum=n;
+        int sq=n*n;
+        int div=1;
+        int count=0;
+        while(originalnum>0)
+        {
+            div*=10;
+            originalnum/=10;
+        }
+        int sum=0;
+        while(sq>0)
+        {
+            int rem=sq%div;
+            sum=sum+rem;
+            sq/=div;
+        }
+        if(sum==n)
+        {
+            System.out.println(n+" "+"is an karprekar number!");
+        }
+    }
+}
